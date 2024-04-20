@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>ITC finale</title>
+</head>
+<body class="p-0 m-0">
+  <nav class="border-solid border-red-500 border-2 w-full h-20 flex items-center justify-between px-8">
+    <div>
+      <a href="">
+        <img src="./img/nav-himativ.png" alt="Logo Himatif" class="h-10">
+      </a>
+    </div>
+
+    <div>
+      <ul class="flex gap-20 font-black font-nunito">
+        <li><a href="">Home</a></li>
+        <li>
+          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleDropdown()">
+            <p>Kabinet</p>
+            <img src="./img/arrow.svg" width="10px">
+          </div>
+
+          <ul class="bg-slate-100 rounded-lg py-[8px] absolute mt-1 font-bold w-[180px] text-sm hidden" id="kabinetMenu">
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Sambutan Kahim</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Visi Misi</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Logo</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Struktur Organisasi</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Departemen</a></li>
+          </ul>
+        </li>
+        <li><a href="">Arsip</a></li>
+        <li><a href="">Kegiatan</a></li>
+        <li><a href="">Kelompok Studi</a></li>
+        <li><a href="">Komunitas</a></li>
+        <li><a href="">Acumalaka</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    function toggleDropdown(){
+      let menu = document.getElementById('kabinetMenu')
+      menu.classList.toggle("hidden")
+    }
+  </script>
+</body>
+</html>
