@@ -10,7 +10,7 @@
   <title>ITC finale</title>
 </head>
 <body class="p-0 m-0">
-  <nav class="border-solid border-red-500 border-2 w-full h-20 flex items-center justify-between px-8">
+  <nav class="\w-full h-20 flex items-center justify-between px-8">
     <div>
       <a href="">
         <img src="./img/nav-himativ.png" alt="Logo Himatif" class="h-10">
@@ -19,14 +19,14 @@
 
     <div>
       <ul class="flex gap-20 font-black font-nunito">
-        <li><a href="">Home</a></li>
-        <li>
-          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleDropdown()">
+        <li><a href="" class="">Home</a></li>
+        <li class="toggle-trigger">
+          <div class="flex items-center gap-2 cursor-pointer">
             <p>Kabinet</p>
             <img src="./img/arrow.svg" width="10px">
           </div>
 
-          <ul class="bg-slate-100 rounded-lg py-[8px] absolute mt-1 font-bold w-[180px] text-sm hidden" id="kabinetMenu">
+          <ul class="bg-slate-100 rounded-lg py-[8px] absolute mt-1 font-bold w-[180px] text-sm hidden drop-down">
             <li class="py-2 hover:bg-slate-300 text-center"><a href="">Sambutan Kahim</a></li>
             <li class="py-2 hover:bg-slate-300 text-center"><a href="">Visi Misi</a></li>
             <li class="py-2 hover:bg-slate-300 text-center"><a href="">Logo</a></li>
@@ -36,18 +36,37 @@
         </li>
         <li><a href="">Arsip</a></li>
         <li><a href="">Kegiatan</a></li>
-        <li><a href="">Kelompok Studi</a></li>
-        <li><a href="">Komunitas</a></li>
+        <li class="toggle-trigger">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <p>Kelompok Study</p>
+            <img src="./img/arrow.svg" width="10px">
+          </div>
+
+          <ul class="bg-slate-100 rounded-lg py-[8px] absolute mt-1 font-bold w-[180px] text-sm hidden drop-down">
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">ITC</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">KSL</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">MMC</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Olahraga</a></li>
+          </ul>
+        </li>
+        <li class="toggle-trigger">
+          <div class="flex items-center gap-2 cursor-pointer">
+            <p>Komunitas</p>
+            <img src="./img/arrow.svg" width="10px">
+          </div>
+
+          <ul class="bg-slate-100 rounded-lg py-[8px] absolute mt-1 font-bold w-[180px] text-sm hidden drop-down">
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">ITC</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">KSL</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">MMC</a></li>
+            <li class="py-2 hover:bg-slate-300 text-center"><a href="">Olahraga</a></li>
+          </ul>
+        </li>
         <li><a href="">Acumalaka</a></li>
       </ul>
     </div>
   </nav>
 
-  <script>
-    function toggleDropdown(){
-      let menu = document.getElementById('kabinetMenu')
-      menu.classList.toggle("hidden")
-    }
-  </script>
+  <script src="./nav-script.js"></script>
 </body>
 </html>
